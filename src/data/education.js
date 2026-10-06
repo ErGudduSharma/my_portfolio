@@ -14,8 +14,6 @@ const EDUCATION = [
         title: "Self-Directed AI/ML Professional Development",
         institution: "Independent Study",
         date: "2022 — 2025",
-        start: { y: 2022, m: 1 },
-        end: { y: 2025, m: 12 },
         description: "8+ structured courses covering Machine Learning, Deep Learning, NLP, LLMs, RAG, AI Agents, MLOps, DLOps, Computer Vision, and GenAI."
     }
 ];

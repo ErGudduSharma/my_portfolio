@@ -83,8 +83,12 @@
                 <p class="answer-title">${PROFILE.title}</p>
                 <p class="answer-role"><span class="slashes">//</span> ${PROFILE.currentRole}</p>
                 <div class="answer-actions">
-                    <button type="button" class="action-btn is-primary" id="resumeBtn">./resume --export</button>
-                    <a class="action-btn" href="#step-4">./contact</a>
+                    <a class="action-btn is-primary" id="resumeBtn" href="Guddu_Resume.pdf" download>
+                        Download resume <span class="cmd-decoration">./resume --export</span>
+                    </a>
+                    <a class="action-btn" href="#step-4">
+                        Contact me <span class="cmd-decoration">./contact</span>
+                    </a>
                 </div>
                 <button type="button" class="rerun-btn" id="rerunBtn">
                     <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.89M13.5 2v3.5H10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -112,7 +116,6 @@
             <div class="profile-copy">${restHtml}</div>
             <div class="focus-tags">${tagsHtml}</div>
             <p class="focus-hint">Click a skill to filter the projects it's used in (step 03).</p>
-            <div class="impact-grid">${impactHtml}</div>
         `;
 
         const toolCall = renderToolCall({
@@ -124,12 +127,15 @@
             bodyHtml
         });
 
+        // Impact numbers stay outside the collapsible tool-call body: they're
+        // part of the basics a visitor should see without clicking anything.
         return `
             <section class="step col" id="step-1">
                 <div class="step-header">
                     <span class="step-number">01</span>
                     <span class="step-label">Plan &rarr; Profile</span>
                 </div>
+                <div class="impact-grid reveal">${impactHtml}</div>
                 ${toolCall}
             </section>
         `;
@@ -156,12 +162,16 @@
         }).join('');
 
         const eduCalls = EDUCATION.map(ed => {
-            const duration = formatDuration(monthsBetween(ed.start, ed.end));
+            // Only compute a duration when we have real month-level start/end
+            // dates. "2022 to 2025" with no month given is the resume's own
+            // precision, so showing a computed "3y 11mo" would invent detail
+            // that isn't there — fall back to the plain year range instead.
+            const meta = (ed.start && ed.end) ? formatDuration(monthsBetween(ed.start, ed.end)) : ed.date;
             const bodyHtml = `<p class="tool-call-description">${ed.description}</p>`;
             return renderToolCall({
                 name: fn('retrieve.education', { institution: ed.institution }),
                 status: 'done', statusLabel: 'DONE',
-                meta: duration,
+                meta,
                 summary: ed.title,
                 bodyHtml
             });
@@ -422,12 +432,19 @@
         });
     }
 
-    // ---------------- Resume export ----------------
+    // ---------------- Resume download (hidden if the file isn't there) ----------------
 
     function initResumeButton() {
         const btn = document.getElementById('resumeBtn');
         if (!btn) return;
-        btn.addEventListener('click', () => window.print());
+        // fetch() is blocked by CORS on file:// entirely (even for files that
+        // exist), so there's no reliable way to check locally — leave the
+        // button visible there. Over http(s) (GitHub Pages), do the real check.
+        if (location.protocol === 'file:') return;
+        const href = btn.getAttribute('href');
+        fetch(href, { method: 'HEAD' })
+            .then(res => { if (!res.ok) btn.hidden = true; })
+            .catch(() => { btn.hidden = true; });
     }
 
     // ---------------- Skill filter (step 01 tags -> step 03 projects) ----------------
@@ -498,7 +515,7 @@
             const progress = total > 0 ? Math.min(Math.max(scrollTop / total, 0), 1) : 0;
 
             if (progressBar) progressBar.style.width = `${progress * 100}%`;
-            if (railFill) railFill.style.height = `${progress * 100}%`;
+            if (railFill) railFill.style.setProperty('--rail-progress', progress);
 
             let current = sections[0] ? sections[0].id : '';
             sections.forEach(section => {
