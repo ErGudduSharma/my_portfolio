@@ -376,7 +376,7 @@ header {
     position: relative;
     max-width: var(--container);
     margin: 0 auto;
-    padding: clamp(48px, 7vw, 104px) var(--edge) clamp(64px, 8vw, 112px);
+    padding: clamp(32px, 4.5vw, 64px) var(--edge) clamp(40px, 5.5vw, 72px);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -389,7 +389,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 28px;
+    gap: 20px;
 }
 
 .status-chip {
