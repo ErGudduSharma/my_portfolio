@@ -129,7 +129,7 @@
                             <button type="button" class="profile-card-btn" id="profileFlipBtn" aria-label="Flip the profile card" aria-pressed="false">
                                 <span class="card-face card-front">
                                     <span class="photo-area">
-                                        <img src="${PROFILE.photo}" alt="${escapeHtml(PROFILE.photoAlt)}" loading="eager" width="640" height="848">
+                                        <img src="${PROFILE.photo}" alt="${escapeHtml(PROFILE.photoAlt)}" loading="eager" width="700" height="700">
                                         <span class="scan-line scan" aria-hidden="true"></span>
                                         <span class="corner corner-tl" aria-hidden="true"></span>
                                         <span class="corner corner-tr" aria-hidden="true"></span>

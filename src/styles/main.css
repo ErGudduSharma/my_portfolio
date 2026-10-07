@@ -504,6 +504,7 @@ header {
 
 .hero-visual {
     flex: 1 1 380px;
+    max-width: 460px;
     min-width: 0;
     display: flex;
     flex-direction: column;
