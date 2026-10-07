@@ -2,9 +2,9 @@
 // design/portfolio-mockup-reference.html mockup.
 const PROFILE = {
     name: "Guddu Sharma",
-    title: "Full-Stack + AI Developer",
-    currentRole: "Technical Team Lead, Create Consciously Pvt. Ltd.",
-    currentRoleShort: "Technical Team Lead at Create Consciously Pvt. Ltd.",
+    title: "Full Stack AI Developer",
+    currentRole: "Full Stack AI Developer, Create Consciously AI Pvt. Ltd.",
+    currentRoleShort: "Full Stack AI Developer at Create Consciously AI Pvt. Ltd.",
     location: "Jaipur, Rajasthan",
     email: "guddusharma0071@gmail.com",
     phone: "+91 9057057804",
@@ -18,10 +18,11 @@ const PROFILE = {
     // accent color, matched against the end of headline.
     headline: "I build full-stack applications with AI at the core.",
     headlineAccent: "AI at the core.",
-    heroSummary: "Full-Stack + AI Developer in Jaipur. I lead a technical team at Create Consciously, building FastAPI and React products with LLM agents, RAG pipelines and n8n automation.",
+    heroSummary: "Full Stack AI Developer in Jaipur. I lead a technical team at Create Consciously AI, building FastAPI and React products with LLM agents, RAG pipelines and n8n automation.",
 
-    // Typed "role >" line in the hero cycles through these.
-    titles: ["Full-Stack Developer", "AI/ML Engineer", "Technical Team Lead", "GenAI & Automation"],
+    // Typed "role >" line in the hero cycles through these (matches the
+    // resume header's own title list, in its own order).
+    titles: ["Full Stack AI Developer", "AI/ML Engineer", "Technical Team Leadership", "GenAI & Automation"],
 
     // Profile card back face ("Quick facts").
     focus: "AI agents, RAG pipelines, full-stack apps, n8n automation",

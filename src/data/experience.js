@@ -3,8 +3,8 @@
 const EXPERIENCE = [
     {
         id: "exp-leadership",
-        role: "Technical Team Lead & Full-Stack Developer",
-        company: "Create Consciously Pvt. Ltd.",
+        role: "Full Stack AI Developer",
+        company: "Create Consciously AI Pvt. Ltd.",
         companyUrl: "",
         location: "Jaipur, India",
         date: "April 2026 — Present",
@@ -22,7 +22,7 @@ const EXPERIENCE = [
         tech: ["Python", "FastAPI", "React", "REST APIs", "n8n", "Claude", "ChatGPT", "Grok", "Google Gemini"],
         stats: null,
         pathYears: "Apr 2026 – Present",
-        pathOrg: "Create Consciously Pvt. Ltd., Jaipur",
+        pathOrg: "Create Consciously AI Pvt. Ltd., Jaipur",
         pathBlurb: "Leading a technical team and building AI-powered, full-stack applications."
     },
     {
