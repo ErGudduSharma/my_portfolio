@@ -12,12 +12,12 @@ const EXPERIENCE = [
         end: null,
         summary: "I lead a technical team and build AI-powered and full-stack applications from planning through delivery.",
         bullets: [
-            "Lead the team through planning, development, integration, testing and delivery.",
-            "Build end-to-end web applications with Python, FastAPI, React, REST APIs, databases and AI/LLM integrations.",
-            "Design AI-powered workflows, prompt engineering solutions and automation pipelines in n8n.",
-            "Work with Claude, ChatGPT, Grok and Google Gemini for development, research, automation and AI solution design.",
-            "Manage task allocation, priorities, code reviews, debugging and coordination across the team.",
-            "Build and integrate AI agents, APIs, automation workflows and backend services for business applications."
+            "Leading a technical team in the planning, development, integration, testing, and delivery of AI-powered and full-stack applications.",
+            "Developing end-to-end web applications using Python, FastAPI, React, REST APIs, databases, and AI/LLM integrations.",
+            "Designing and implementing AI-powered workflows, prompt engineering solutions, and automation pipelines using n8n.",
+            "Working with modern AI tools including Claude, ChatGPT, Grok, and Google Gemini for development, research, automation, and AI solution design.",
+            "Managing technical task allocation, development priorities, code reviews, debugging, and coordination across team members to support timely project delivery.",
+            "Building and integrating AI agents, APIs, automation workflows, and backend services for business-oriented applications."
         ],
         tech: ["Python", "FastAPI", "React", "REST APIs", "n8n", "Claude", "ChatGPT", "Grok", "Google Gemini"],
         stats: null,
@@ -36,11 +36,11 @@ const EXPERIENCE = [
         end: { y: 2026, m: 3 },
         summary: "I built ML pipelines, tuned models and prototyped a RAG document Q&A tool for the analytics team.",
         bullets: [
-            "Designed and deployed end-to-end ML pipelines in Python processing 10,000+ records.",
-            "Tuned Random Forest and SVM models with GridSearchCV, RandomizedSearchCV and k-fold cross-validation for a ~20% accuracy improvement over baseline.",
-            "Ran EDA and feature engineering with Pandas, NumPy, Matplotlib and Seaborn, uncovering 3+ high-impact data patterns.",
-            "Prototyped a RAG document Q&A tool with LangChain and FAISS, cutting manual lookup time by ~40%.",
-            "Integrated Transformer-based LLMs and RAG into ML workflows with real-time FastAPI endpoints."
+            "Designed and deployed scalable end-to-end ML pipelines in Python to process and analyze 10,000+ records, enabling automated extraction of actionable strategic insights that supported data-driven decision-making.",
+            "Fine-tuned Random Forest and SVM classification and regression models using GridSearchCV, RandomizedSearchCV, and k-fold cross-validation, achieving ~20% improvement in prediction accuracy over the baseline.",
+            "Conducted comprehensive EDA and feature engineering using Pandas, NumPy, Matplotlib, and Seaborn, uncovering 3+ high-impact data patterns.",
+            "Architected and prototyped a RAG-based document Q&A tool using LangChain and FAISS, reducing manual data lookup time by ~40% for the analytics team.",
+            "Integrated Transformer-based LLMs and RAG architectures into traditional ML workflows, with real-time API endpoints built on FastAPI."
         ],
         tech: ["Python", "Random Forest", "SVM", "LangChain", "FAISS", "FastAPI", "Pandas", "NumPy"],
         stats: [
