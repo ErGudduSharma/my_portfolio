@@ -17,6 +17,10 @@
             .replace(/>/g, '&gt;');
     }
 
+    function emailDisplay(email) {
+        return escapeHtml(email).replace('@', '@<wbr>');
+    }
+
     function formatCount(n) {
         return n.toLocaleString('en-US');
     }
@@ -149,7 +153,7 @@
                                     <span class="qf-row"><span class="fm qf-key">Now</span><span class="fd qf-val">${escapeHtml(PROFILE.currentRole)}</span></span>
                                     <span class="qf-row"><span class="fm qf-key">Based in</span><span class="fd qf-val">${escapeHtml(PROFILE.location)}</span></span>
                                     <span class="qf-row"><span class="fm qf-key">Focus</span><span class="fd qf-val">${escapeHtml(PROFILE.focus)}</span></span>
-                                    <span class="qf-row email"><span class="fm qf-key">Email</span><span class="fd qf-val">${escapeHtml(PROFILE.email)}</span></span>
+                                    <span class="qf-row email"><span class="fm qf-key">Email</span><span class="fd qf-val">${emailDisplay(PROFILE.email)}</span></span>
                                 </span>
                             </button>
                         </div>
@@ -484,7 +488,7 @@
                         <h2 class="fd contact-heading">${escapeHtml(PROFILE.contactHeading)}</h2>
                         <div class="contact-rows">
                             <a class="row contact-row" href="mailto:${PROFILE.email}">
-                                <span class="rowin"><span class="fm contact-row-label">Email</span><span class="fd contact-row-value">${escapeHtml(PROFILE.email)}</span></span>
+                                <span class="rowin"><span class="fm contact-row-label">Email</span><span class="fd contact-row-value">${emailDisplay(PROFILE.email)}</span></span>
                                 ${extIconSvg('arx')}
                             </a>
                             <a class="row contact-row" href="tel:${PROFILE.phone.replace(/\s+/g, '')}">
