@@ -360,7 +360,7 @@
                         <div class="fm section-rail-label"><span class="num">02</span><span>Experience</span></div>
                     </div>
                     <div class="section-main">
-                        <h2 class="fd section-heading sv-poly" data-reveal="sv">From intern to team lead.</h2>
+                        <h2 class="fd section-heading sv-poly" data-reveal="sv">From data science to full-stack AI.</h2>
                         <div class="timeline">${items}</div>
                     </div>
                 </div>

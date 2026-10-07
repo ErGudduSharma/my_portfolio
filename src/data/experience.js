@@ -10,7 +10,7 @@ const EXPERIENCE = [
         date: "April 2026 — Present",
         start: { y: 2026, m: 4 },
         end: null,
-        summary: "I lead a technical team and build AI-powered and full-stack applications from planning through delivery.",
+        summary: "Full Stack AI Developer building AI-powered and full-stack applications — from FastAPI and React to LLM integrations and n8n automation.",
         bullets: [
             "Leading a technical team in the planning, development, integration, testing, and delivery of AI-powered and full-stack applications.",
             "Developing end-to-end web applications using Python, FastAPI, React, REST APIs, databases, and AI/LLM integrations.",
@@ -34,7 +34,7 @@ const EXPERIENCE = [
         date: "May 2025 — March 2026",
         start: { y: 2025, m: 5 },
         end: { y: 2026, m: 3 },
-        summary: "I built ML pipelines, tuned models and prototyped a RAG document Q&A tool for the analytics team.",
+        summary: "Data Science Intern work spanning ML pipeline design, model tuning, and a production RAG tool for the analytics team.",
         bullets: [
             "Designed and deployed scalable end-to-end ML pipelines in Python to process and analyze 10,000+ records, enabling automated extraction of actionable strategic insights that supported data-driven decision-making.",
             "Fine-tuned Random Forest and SVM classification and regression models using GridSearchCV, RandomizedSearchCV, and k-fold cross-validation, achieving ~20% improvement in prediction accuracy over the baseline.",
