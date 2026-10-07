@@ -1204,6 +1204,7 @@ header {
     border-top: 1.5px solid var(--ink);
     color: var(--ink);
 }
+.contact-row .rowin { display: flex; flex-direction: column; gap: 4px; }
 .contact-row-label { font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; }
 .contact-row-value { font-size: clamp(18px, 2vw, 22px); font-weight: 700; overflow-wrap: anywhere; }
 
