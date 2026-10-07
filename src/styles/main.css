@@ -46,6 +46,14 @@
     box-sizing: border-box;
 }
 
+/* A class setting its own `display` (e.g. .btn-primary { display: inline-flex })
+   otherwise beats the UA stylesheet's [hidden] rule on specificity, so an
+   element's own `hidden` attribute silently stops working. Keep it working —
+   this is what actually hides the resume buttons when the PDF is missing. */
+[hidden] {
+    display: none !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
